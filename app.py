@@ -29,12 +29,12 @@ def call_back_1():
     return flask.redirect("/")
 
 
-@app.server.route("/predict")
+@app.server.route("/predicted Wind_Power ")
 def predict():
     print("dfz")
     return flask.redirect("/")
 
-@app.server.route("/predict")
+@app.server.route("/predicted_ Solar_power")
 def predict():
     print("dfz1")
     return flask.redirect("/")

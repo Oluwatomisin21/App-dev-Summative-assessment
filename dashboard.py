@@ -14,11 +14,11 @@ def get_dash(server):
                     external_stylesheets=external_stylesheets
                     )
 
-    df = get_data()
+    dfz = get_data()
 
     styles = get_styles()
 
-    fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
+    fig = px.bar(dfz, x="Fruit", y="Amount", color="City", barmode="group")
 
     app.layout = html.Div([
         # html.H6("Change the value in the text box to see callbacks in action!"),
@@ -37,13 +37,25 @@ def get_dash(server):
     return app
 
 
+# def get_data():
+#     df = pd.DataFrame({
+#             "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
+#             "Amount": [4, 1, 2, 2, 4, 5],
+#             "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
+#         })
+#     return df
+
+
+# predicted wind_power
 def get_data():
-    df = pd.DataFrame({
-            "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-            "Amount": [4, 1, 2, 2, 4, 5],
-            "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
-        })
-    return df
+    dfz = pd.DataFrame({ "Predicted Power Output"})
+    return dfz
+
+
+# predicticted solar power 
+def get_data():
+    dfz1 = pd.DataFrame({ "Predicted Power Output"})
+    return dfz1
 
 
 def get_styles():
